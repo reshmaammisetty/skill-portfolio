@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings · SkillFolio</title>
+  <script src="/js/theme.js"></script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-page="settings">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="main">
+    <header class="topbar" id="topbar"></header>
+    <main class="content">
+      <div class="page-head"><div><h1>Settings</h1><p class="muted">Manage your account, security and appearance.</p></div></div>
+      <div class="grid two">
+        <section class="card">
+          <h2>Account</h2>
+          <form id="accountForm" class="stack-form" style="margin-top:1rem">
+            <div class="field"><label for="name">Full name</label><input id="name" name="name" required maxlength="80"></div>
+            <div class="field"><label for="headline">Professional headline</label><input id="headline" name="headline" maxlength="120"></div>
+            <div class="field"><label for="email">Email</label><input id="email" name="email" readonly></div>
+            <div class="field"><label for="username">Public username</label><input id="username" name="username" required pattern="[a-zA-Z0-9\-]{3,30}" title="3-30 letters, numbers or hyphens"><span class="small muted" id="urlPreview"></span></div>
+            <div class="field"><label for="isPublic">Portfolio visibility</label>
+              <select id="isPublic" name="isPublic"><option value="true">Public (anyone with the link)</option><option value="false">Private (only me)</option></select></div>
+            <div class="form-error hidden" id="accountError"></div>
+            <div class="actions"><button class="btn btn-primary" type="submit">Save changes</button><a class="btn btn-outline" href="/profile.html">Edit full profile</a></div>
+          </form>
+        </section>
+
+        <div class="stack">
+          <section class="card">
+            <h2>Change password</h2>
+            <form id="passwordForm" class="stack-form" style="margin-top:1rem">
+              <div class="field"><label for="currentPassword">Current password</label><input id="currentPassword" type="password" required autocomplete="current-password"></div>
+              <div class="field"><label for="newPassword">New password</label><input id="newPassword" type="password" required minlength="8" autocomplete="new-password"><span class="small muted">At least 8 characters, with a letter and a number.</span></div>
+              <div class="field"><label for="confirmPassword">Confirm new password</label><input id="confirmPassword" type="password" required autocomplete="new-password"></div>
+              <div class="form-error hidden" id="passwordError"></div>
+              <div><button class="btn btn-primary" type="submit">Update password</button></div>
+            </form>
+          </section>
+
+          <section class="card">
+            <h2>Appearance</h2>
+            <p class="muted small" style="margin:.4rem 0 .8rem">Switch between light and dark mode.</p>
+            <button class="btn btn-outline" id="themeToggle">Toggle theme</button>
+          </section>
+
+          <section class="card">
+            <h2>Session &amp; danger zone</h2>
+            <div class="actions" style="margin-top:.8rem;flex-wrap:wrap">
+              <button class="btn btn-ghost" id="logoutBtn2">Log out</button>
+              <button class="btn btn-danger" id="deleteBtn">Delete account</button>
+            </div>
+            <p class="muted small" style="margin-top:.6rem">Deleting your account permanently removes all your data.</p>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="/js/api.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/settings.js"></script>
+</body>
+</html>

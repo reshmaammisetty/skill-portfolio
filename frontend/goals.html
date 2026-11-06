@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goals · SkillFolio</title>
+  <script src="/js/theme.js"></script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-page="goals">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="main">
+    <header class="topbar" id="topbar"></header>
+    <main class="content">
+      <div class="page-head">
+        <div><h1>Goals</h1><p class="muted">Set daily, weekly and monthly goals and track your completion.</p></div>
+        <button class="btn btn-primary" id="addBtn">+ New goal</button>
+      </div>
+      <div class="toolbar">
+        <select id="filterType" aria-label="Filter by type"><option value="All">All types</option><option>Daily</option><option>Weekly</option><option>Monthly</option></select>
+        <select id="filterStatus" aria-label="Filter by status"><option value="All">All statuses</option><option>Not Started</option><option>In Progress</option><option>Completed</option></select>
+      </div>
+      <div class="cards" id="list"></div>
+    </main>
+  </div>
+  <script src="/js/api.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/goals.js"></script>
+</body>
+</html>

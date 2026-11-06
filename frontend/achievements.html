@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Achievements · SkillFolio</title>
+  <script src="/js/theme.js"></script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-page="achievements">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="main">
+    <header class="topbar" id="topbar"></header>
+    <main class="content">
+      <div class="page-head">
+        <div><h1>Achievements</h1><p class="muted">Certificates, competitions and course completions.</p></div>
+        <button class="btn btn-primary" id="addBtn">+ Add achievement</button>
+      </div>
+      <div class="toolbar">
+        <select id="filterType" aria-label="Filter by type">
+          <option value="All">All types</option><option>Certificate</option><option>Coding Competition</option><option>Course Completion</option><option>Other</option>
+        </select>
+      </div>
+      <div class="cards" id="list"></div>
+    </main>
+  </div>
+  <script src="/js/api.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/achievements.js"></script>
+</body>
+</html>

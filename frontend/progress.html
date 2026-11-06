@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress · SkillFolio</title>
+  <script src="/js/theme.js"></script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-page="progress">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="main">
+    <header class="topbar" id="topbar"></header>
+    <main class="content">
+      <div class="page-head">
+        <div><h1>Progress Tracking</h1><p class="muted">See how your learning, skills and projects are developing.</p></div>
+        <button class="btn btn-primary" id="logBtn">+ Log learning session</button>
+      </div>
+      <div class="grid two">
+        <section class="card"><div class="card-head"><h2>This week</h2><span class="muted small" id="weekTotal"></span></div><div id="weekChart"></div></section>
+        <section class="card"><div class="card-head"><h2>Last 6 months</h2><span class="muted small" id="monthTotal"></span></div><div id="monthChart"></div></section>
+      </div>
+      <div class="grid two">
+        <section class="card"><h2>Skill improvement</h2><div id="skillImprovement"></div></section>
+        <section class="card"><h2>Project completion</h2><div id="projectStats"></div></section>
+      </div>
+      <section class="card">
+        <h2>Learning activity history</h2>
+        <div class="table-wrap" id="history"></div>
+      </section>
+    </main>
+  </div>
+  <script src="/js/api.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/progress.js"></script>
+</body>
+</html>

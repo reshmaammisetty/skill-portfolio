@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard · SkillFolio</title>
+  <script src="/js/theme.js"></script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-page="dashboard">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="main">
+    <header class="topbar" id="topbar"></header>
+    <main class="content">
+      <section class="card welcome" id="welcome"></section>
+      <section class="grid stats" id="stats"></section>
+      <div class="grid two">
+        <section class="card"><h2>Learning progress</h2><div id="learning"></div></section>
+        <section class="card"><h2>Analytics</h2><div id="analytics"></div></section>
+      </div>
+      <div class="grid two">
+        <section class="card">
+          <div class="card-head"><h2>Active goals</h2><a href="/goals.html" class="small">View all</a></div>
+          <div id="goals"></div>
+        </section>
+        <section class="card">
+          <div class="card-head"><h2>Recent activity</h2></div>
+          <ul class="activity" id="activity"></ul>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="/js/api.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

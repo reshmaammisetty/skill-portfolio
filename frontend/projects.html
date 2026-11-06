@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects · SkillFolio</title>
+  <script src="/js/theme.js"></script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-page="projects">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="main">
+    <header class="topbar" id="topbar"></header>
+    <main class="content">
+      <div class="page-head">
+        <div><h1>Projects</h1><p class="muted">Document what you have built and what you are working on.</p></div>
+        <button class="btn btn-primary" id="addBtn">+ Add project</button>
+      </div>
+      <div class="toolbar">
+        <select id="filterStatus" aria-label="Filter by status">
+          <option value="All">All statuses</option><option>Planned</option><option>In Progress</option><option>Completed</option>
+        </select>
+      </div>
+      <div class="cards" id="list"></div>
+    </main>
+  </div>
+  <script src="/js/api.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/projects.js"></script>
+</body>
+</html>

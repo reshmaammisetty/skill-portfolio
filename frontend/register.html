@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create account · SkillFolio</title>
+  <script src="/js/theme.js"></script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="auth-page">
+  <div class="card auth-card">
+    <a class="brand brand-center" href="/"><span class="logo">S</span><span>SkillFolio</span></a>
+    <h1>Create your account</h1>
+    <p class="muted">Start building your skill portfolio today.</p>
+    <div class="form-error hidden" id="formError"></div>
+    <form id="registerForm" class="stack-form">
+      <div class="field"><label for="name">Full name</label><input id="name" name="name" type="text" required maxlength="80" autocomplete="name"></div>
+      <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+      <div class="field"><label for="password">Password</label><input id="password" name="password" type="password" required minlength="8" autocomplete="new-password"><span class="small muted">At least 8 characters, with a letter and a number.</span></div>
+      <div class="field"><label for="confirm">Confirm password</label><input id="confirm" name="confirm" type="password" required autocomplete="new-password"></div>
+      <button class="btn btn-primary btn-block" type="submit">Create account</button>
+    </form>
+    <p class="auth-switch">Already have an account? <a href="/login.html">Log in</a></p>
+  </div>
+  <script src="/js/api.js"></script>
+  <script src="/js/auth.js"></script>
+</body>
+</html>
