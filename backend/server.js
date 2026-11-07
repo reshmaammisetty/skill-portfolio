@@ -6,13 +6,8 @@ const helmet = require('helmet');
 const connectDB = require('./config/db');
 const { notFound, errorHandler } = require('./middleware/error');
 
-if (!process.env.MONGO_URI) {
-  process.env.MONGO_URI = 'mongodb://localhost:27017/skill_portfolio';
-  console.warn('MONGO_URI not set; using local MongoDB default: mongodb://localhost:27017/skill_portfolio');
-}
-
-if (!process.env.JWT_SECRET) {
-  console.error('Missing JWT_SECRET. Copy .env.example to .env and fill it in.');
+if (!process.env.MONGO_URI || !process.env.JWT_SECRET) {
+  console.error('Missing MONGO_URI or JWT_SECRET. Set both as environment variables before starting the server.');
   process.exit(1);
 }
 
