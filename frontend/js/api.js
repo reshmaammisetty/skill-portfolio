@@ -1,4 +1,5 @@
 const TOKEN_KEY = 'token';
+const API_BASE_URL = 'https://skill-portfolioo.onrender.com/api';
 const getToken = () => localStorage.getItem(TOKEN_KEY);
 const setToken = (t) => localStorage.setItem(TOKEN_KEY, t);
 
@@ -14,7 +15,7 @@ async function api(path, { method = 'GET', body } = {}) {
 
   let res;
   try {
-    res = await fetch('/api' + path, {
+    res = await fetch(API_BASE_URL + path, {
       method,
       headers,
       body: body !== undefined ? JSON.stringify(body) : undefined,
